@@ -1,0 +1,30 @@
+<head>
+<title>Doug`s Mega Lottery</title>
+<link href="<%= url('/css/style.css') %>" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<img alt="doug" align="left" src="/img/lotto.png" width="300" height="300" />
+<img alt="doug" align="right" src="/img/lottery.png" width="300" height="300" />	
+<center>
+<br>
+<div class="title">Welcome to Doug`s Mega Lottery</div><br>
+<img alt="doug" align="center" src="/img/cross.png" width="400" height="200" />
+<br>
+
+The winning numbers are:
+<% $winning_numbers %>
+<form method="post" action="number">
+	<input type= "text" name= "num1">
+	<input type= "text" name= "num2">
+	<input type= "text" name= "num3">
+	<input type= "text" name= "num4">
+	<input type= "text" name= "num5">
+	<input type= "text" name= "num6">
+</form>
+<br>
+<img alt="doug" align="center" src="/img/logo.png" width="400" height="200" />
+<br>
+<br>
+</div>
+</center>
+</body>
