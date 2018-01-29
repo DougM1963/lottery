@@ -5,44 +5,54 @@ get '/' do
 	erb :home
    end
 
- post '/number' do
-    num1 = params[:num1]
+ post '/check_numbers' do
+  num1 = params[:num1]
     num2 = params[:num2]
     num3 = params[:num3]
     num4 = params[:num4]
     num5 = params[:num5]
     num6 = params[:num6]
-    redirect '/result?num1=' + num1 +'&num2=' + num2 + '&num3=' + num3 +'&num4=' + num4 + '&num5=' + num5 + '&num6=' + num6 
-    end
+    win1 = params[:win1]
+    win2 = params[:win2]
+    win3 = params[:win3]
+    win4 = params[:win4]
+    win5 = params[:win5]
+    win6 = params[:win6]  
+    redirect '/result?num1=' + num1 + '&num2=' + num2 + '&num3=' + num3 + '&num4=' + num4 + '&num5=' + num5 + '&num6=' + num6  + '&win1=' + win1 + '&win2=' + win2 + '&win3=' + win3 + '&win4=' + win4 + '&win5=' + win5 + '&win6=' + win6
+end
 
  get '/result' do
- 	num1 = params[:num1]
-    num2 = params[:num2]
-    num3 = params[:num3]
-    num4 = params[:num4]
-    num5 = params[:num5]
-    num6 = params[:num6]
-    erb :result, :locals => {:num1 => num1, :num2 => num2, :num3 => num3, :num4 => num4, :num5 => num5, :num6 => num6}
-    end
-
-     post '/winning_number' do
     num1 = params[:num1]
     num2 = params[:num2]
     num3 = params[:num3]
     num4 = params[:num4]
     num5 = params[:num5]
     num6 = params[:num6]
-    redirect '/final?num1=' + num1 +'&num2=' + num2 + '&num3=' + num3 +'&num4=' + num4 + '&num5=' + num5 + '&num6=' + num6 
+    win1 = params[:win1]
+    win2 = params[:win2]
+    win3 = params[:win3]
+    win4 = params[:win4]
+    win5 = params[:win5]
+    win6 = params[:win6]  
+    erb :result, :locals => {:num1 => num1, :num2 => num2, :num3 => num3, :num4 => num4, :num5 => num5, :num6 => num6, :win1 => win1, :win2 => win2, :win3 => win3, :win4 => win4, :win5 => win5, :win6 => win6}
     end
 
- get '/final' do
+ post '/result' do
     num1 = params[:num1]
     num2 = params[:num2]
     num3 = params[:num3]
     num4 = params[:num4]
     num5 = params[:num5]
     num6 = params[:num6]
-    erb :final, :locals => {:num1 => num1, :num2 => num2, :num3 => num3, :num4 => num4, :num5 => num5, :num6 => num6}
+    win1 = params[:win1]
+    win2 = params[:win2]
+    win3 = params[:win3]
+    win4 = params[:win4]
+    win5 = params[:win5]
+    win6 = params[:win6]  
+    redirect '/result?num1=' + num1 + '&num2=' + num2 + '&num3=' + num3 + '&num4=' + num4 + '&num5=' + num5 + '&num6=' + num6  + '&win1=' + win1 + '&win2=' + win2 + '&win3=' + win3 + '&win4=' + win4 + '&win5=' + win5 + '&win6=' + win6
     end
+
+
 
  

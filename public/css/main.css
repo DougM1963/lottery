@@ -29,13 +29,13 @@ p {
 footer {
 	font-size: 20px;
   	border-top: solid;
-  	border-color: silver;
+  	border-color: #737CA1;
   	text-align: center;
   	position: fixed;
   	bottom: 0px;
   	left: 0;
   	right: 0;
-  	height: 10%;
+  	height: 7%;
 }
 
 .footer-text {

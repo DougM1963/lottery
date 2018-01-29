@@ -8,15 +8,37 @@
 <center>
 <br>
 <div class="title">Welcome to Doug`s Mega Lottery</div><br>
-<img alt="doug" align="center" src="/img/cross.png" width="400" height="200" />
-<br>
-Press Draw to get the winning numbers
-<form method="post" action="number">
-    <br>
-    <input type="submit" value="Draw Winning Numbers">
-<br>
+<img alt="doug" align="center" src="/img/cross.png" width="350" height="150" /><br>
+The Winning Numbers Today Are:<br>
+<% the_winners = winning_numbers %>
+<%= the_winners %><br><br>
+<% 
+win1 = the_winners[0]
+win2 = the_winners[1]
+win3 = the_winners[2]
+win4 = the_winners[3]
+win5 = the_winners[4]
+win6 = the_winners[5]
+%>
+Check your numbers here:<br>
+<form method="post" action="check_numbers">
+	<input type= "integer" name= "num1" size="1">
+	<input type= "integer" name= "num2" size="1">
+	<input type= "integer" name= "num3" size="1">
+	<input type= "integer" name= "num4" size="1">
+	<input type= "integer" name= "num5" size="1">
+	<input type= "integer" name= "num6" size="1"><br>
+	<input type="hidden" name= "win1" value= "<%= win1 %>">
+	<input type="hidden" name= "win2" value= "<%= win2 %>">
+	<input type="hidden" name= "win3" value= "<%= win3 %>">
+	<input type="hidden" name= "win4" value= "<%= win4 %>">
+	<input type="hidden" name= "win5" value= "<%= win5 %>">
+	<input type="hidden" name= "win6" value= "<%= win6 %>">
+	<br>
+    <input type="submit" value="Check Your Numbers">
 </form>
-<img alt="doug" align="center" src="/img/logo.png" width="400" height="200" />
+
+<img alt="doug" align="center" src="/img/logo.png" width="300" height="150" />
 	<br>
 <br>
 </div>

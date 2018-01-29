@@ -3,6 +3,8 @@ def lottery()
 end
 
 def winning_numbers()
-		$winning_numbers = $number_array.sample(6).sort
-	
+	lottery()
+	$winning_numbers = $number_array.sample(6).sort
 end
+# p $number_array = (1..99).to_a
+# p winning_numbers = number_array.sample(6).sort
